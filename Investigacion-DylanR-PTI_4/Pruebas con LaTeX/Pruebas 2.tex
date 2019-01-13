@@ -1,0 +1,91 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\title{Probando LaTeX}
+\author{Dylan Rodas}
+\date{Noviembre 2018}
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+\begin{document}
+
+\begin{tabular}{l l}
+\multirow{5}{*}{\includegraphics[width=2cm]{Resources/Logo_UNIS.png}} & Universidad del Istmo de Guatemala \\
+& Facultad de Ingeniería \\
+& Ingeniería en Sistemas y Ciencias de la Computación \\
+& Prácticas de Trabajo e Investigación 4 \\
+& Dylan Gabriel Rodas Samayoa - \href{mailto:rodas171315@unis.edu.gt}{rodas171315@unis.edu.gt} \\
+\end{tabular}
+\\\    
+	
+\begin{center}
+\horrule{1pt}
+\huge{Pruebas con LaTeX 2} \\
+\large{16 de Noviembre, 2018} \\
+\horrule{1pt}
+\end{center}
+
+\begin{abstract}
+En este documento se realizaran pruebas con LaTeX.
+\end{abstract}
+
+\section*{Gr\'aficos}
+\includegraphics[width=0.3\textwidth,angle=270]{Resources/Tigre.jpg}
+
+\section*{Tablas}
+\begin{tabular}{|l|r|r|} \hline
+Art.   & Cant. & Uni.\$ \\\hline
+DVD    &   1   & 19.99 \\
+Sonido &   2   & 39.99 \\
+Cable  &   3   & 1.99 \\\hline
+\end{tabular}
+\\
+
+\begin{center}
+\section*{Resolución Ejercicio de Documentos Estructurados \#1}
+\end{center}
+Se puede encontrar la solución en el documento ``Documento-Estructurado.tex", ver ahí. \\
+\\
+
+\begin{center}
+\section*{Resolución Ejercicio de Colocar Todo Junto \#2}
+\end{center}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.3\textwidth,angle=180]{Resources/Tigre.jpg}
+    \caption{\label{fig:tigre}Esto es un tigre\ldots.}
+\end{figure}
+
+La figura \ref{fig:tigre} nos muestra un tigre \ldots
+\\
+
+\citet{Brooks1997Methodology} muestra que \ldots. Evidentemente todos los n\'umeros impares son primos \citep{Jacobson1999Towards}.
+\\
+
+Esto \citet{Sutherland2003UNIVAC}, esto \citet{Taylor2003Influence} y esto \citet{Karthik2001Analysis} son referencias que posteriormente serán agregadas automáticamente a mi listado de referencias. Una más por aquí \citet{Smith1990Enabling}.
+
+\bibliography{referencias.bib}
+% Como parametro colocar el nombre de mi archivo con referencias.
+
+\bibliographystyle{abbrvnat}
+% Estilo de bibliografia, otro estilo es plainnat.
+
+\end{document}
